@@ -10,19 +10,23 @@
         <H1>Company Information for Infoteria</H1>
         <H2>Employee Listing</H2>
         <table border="3" width="600" align="center">
-          <tr>
+          <tr >
             <th>Name</th>
             <th>Position</th>
             <th>E-mail</th>
           </tr>
           <xsl:for-each select="//Employee">
-           <xsl:if test="Age &gt; 33">
             <tr>
+              <xsl:attribute name="bgcolor">
+                  <xsl:choose>
+                      <xsl:when test="position() mod 2 = 0">teal</xsl:when>
+                      <xsl:otherwise>white</xsl:otherwise>
+                  </xsl:choose>
+              </xsl:attribute>
              <td><xsl:value-of select="concat(FirstName, ' ', LastName)"/></td>
              <td><xsl:value-of select="Position"/></td>
              <td><xsl:value-of select="Email"/></td>
             </tr>
-            </xsl:if>
           </xsl:for-each>
         </table>
         <p>Total Employees: <xsl:value-of select="count(//Employee)"/></p>
