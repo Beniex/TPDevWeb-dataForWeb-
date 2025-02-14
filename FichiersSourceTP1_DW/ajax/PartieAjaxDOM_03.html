@@ -1,0 +1,143 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>TP MSIF Ajax</title>
+  <meta name="author" content="Elöd EGYED-ZSIGMOND">
+  
+ 
+<script type="text/javascript">
+//fonctions javascript
+// <![CDATA[      
+  
+		  function recupererPremierEnfantDeTypeElement(n) {
+			x = n.firstChild;
+			while ( x.nodeType != 1 ) { // Test if x is an element node (and not a text node or other)
+			  x = x.nextSibling;
+			}
+			return x;
+		  }
+		//change le contenu de l'élement avec l'id "nom" avec la chaine de caractéres en paramètre	  
+		  function setNom( nom ) {
+			var elementHtmlARemplir = window.document.getElementById("id_nom_a_remplacer");
+			elementHtmlARemplir.innerHTML = nom;
+		  }
+		
+		//charge le fichier XML se trouvant à l'URL relative donné dans le paramètreet le retourne
+        function chargerHttpXML(xmlDocumentUrl) { 
+          
+          var httpAjax;
+          
+          httpAjax = window.XMLHttpRequest ?
+            new XMLHttpRequest() :
+            new ActiveXObject('Microsoft.XMLHTTP');
+          
+          if (httpAjax.overrideMimeType) {
+            httpAjax.overrideMimeType('text/xml');
+          }
+          
+          //chargement du fichier XML à l'aide de XMLHttpRequest synchrone (le 3° paramètre est défini à false)
+          httpAjax.open('GET', xmlDocumentUrl, false);
+          httpAjax.send();
+          
+          return httpAjax.responseXML;
+        }
+  
+	 /////////////////////////////////////////////////////////////////////////////////////
+  function Bouton2_ajaxEmployees(xmlDocumentUrl) {
+
+		  
+	  var xmlDocument = chargerHttpXML(xmlDocumentUrl);
+	  
+	  //extraction des noms à partir du document XML (avec une feuille de style ou en javascript)
+	  var lesNoms = xmlDocument.getElementsByTagName("LastName");
+	  
+	  // Parcours de la liste des noms avec une boucle for et 
+	  // construction d'une chaine de charactères contenant les noms séparés par des espaces 
+	  // Pour avoir la longueur d'une liste : attribut 'length'
+	  // Accès au texte d'un noeud "LastName" : NOM_NOEUD.firstChild.nodeValue
+	  var chaineDesNoms = "";
+	  for (i=0;i<lesNoms.length;i++) {
+				if (i>0) { chaineDesNoms = chaineDesNoms +", "; }
+				chaineDesNoms=chaineDesNoms +lesNoms[i].firstChild.nodeValue + " ";
+	  }
+	  
+	  
+	  // Appel (ou recopie) de la fonction setNom(...) ou bien autre façon de modifier le texte de l'élément "span"
+	  setNom(chaineDesNoms);
+	  
+	  
+
+  }
+			
+
+  function Bouton3_ajaxBibliographie(xmlDocumentUrl, xslDocumentUrl, nomElementARecupererDepuisResultatTransformation) {
+	  
+		  //initialisation d'un processur XSL du navigateur
+		  var xsltProcessor = new XSLTProcessor();
+
+		  // Chargement du fichier XSL à l'aide de XMLHttpRequest synchrone 
+		  var xslDocument = chargerHttpXML(xslDocumentUrl); 
+
+		  // Importation du .xsl dans le processeur XSL
+		  xsltProcessor.importStylesheet(xslDocument);
+
+		  // Chargement du fichier XML à l'aide de XMLHttpRequest synchrone 
+		  var xmlDocument = chargerHttpXML(xmlDocumentUrl);
+
+		  // Création du document XML transformé par le XSL
+		  var newXmlDocument = xsltProcessor.transformToDocument(xmlDocument);
+
+		  //on va remplacer le contenu (un élément enfant) d'un noeud connu de la page par un fragment du résultat de la transformation.
+		  // Recherche du parent (dont l'id est "id_element_a_remplacer") de l'élément à remplacer dans le document HTML courant
+		  var elementHtmlParent = window.document.getElementById("id_element_a_remplacer");
+		  
+		  // Premier élément fils du parent
+		  var elementHtmlARemplacer = recupererPremierEnfantDeTypeElement(elementHtmlParent);
+		  
+		  // Premier élément avec la balise cherchée du nouveau document qui résulte de la transofmation du XML avec la feuille de style (ici "ul")
+		  var elementAInserer = newXmlDocument.getElementsByTagName(nomElementARecupererDepuisResultatTransformation)[0];
+		  
+		  // Remplacement de l'élément
+		  elementHtmlParent.replaceChild(elementAInserer,elementHtmlARemplacer);
+
+    }
+
+  
+  function Bouton4_ajaxEmployeesTableau(xmlDocumentUrl, xslDocumentUrl) {
+  //commenter la ligne suivante qui affiche la boîte de dialogue!
+	  alert("Fonction à compléter...");
+  }
+      // ]]>
+</script>
+
+ 
+</head>
+<body
+<p>Fichier à modifier/compélter</p>
+<p>
+<p>
+  <!--le bouton avec l'événement click 'attribut "onClick" capté. Cet événement appelle la fonction javascript setNom défini dans l'en-tête. -->
+  <input name="button" type="button" id="myButton1" onClick="setNom(document.getElementById('myText1').value);" value="1. Remplacer les noms" />
+  
+  <!--le champ de saisi avec l'identifiant "myText1" et la valeur par défaut "Toto" -->
+  <input name="text" type="text" id="myText1" value="Toto" />
+  <br />
+  <!--le bouton avec l'événement click 'attribut "onClick" capté. Cet événement appelle la fonction javascript Bouton2_ajaxEmployees défini dans l'en-tête. -->
+  <input name="button2" type="button" id="myButton2" onClick="Bouton2_ajaxEmployees('Employees.xml');" value="2. AJAX avec Employees.xml" />
+  <br />
+  
+  
+  <input name="button3" type="button" id="myButton3" onClick="Bouton3_ajaxBibliographie('ajax.bib.xml','ajax.bib.xsl','ul');" value="3. AJAX avec ajax.bib.xml/ajax.bib.xsl" />
+  <br />
+</p>
+<div>
+  <p>Les noms sont : <br/>
+      <span id="id_nom_a_remplacer" style="color: red; font-weight: bold;">LES NOMS (Cet &eacute;l&eacute;ment va &ecirc;tre remplac&eacute; par les noms) </span>.</p>
+</div>
+<div id="id_element_a_remplacer">
+  <p style="color: red; font-weight: bold;">Cet &eacute;l&eacute;ment va &ecirc;tre remplac&eacute; par une bibliographie en XML mise en forme par une feuille de style XSLT...</p>
+  </div>
+
+  
+</body>
+</html>

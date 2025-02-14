@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>TP MSIF Ajax</title>
+  <meta name="author" content="Elöd EGYED-ZSIGMOND">
+  
+ 
+<script type="text/javascript">
+//fonctions javascript
+// <![CDATA[      
+  
+		  function recupererPremierEnfantDeTypeElement(n) {
+			x = n.firstChild;
+			while ( x.nodeType != 1 ) { // Test if x is an element node (and not a text node or other)
+			  x = x.nextSibling;
+			}
+			return x;
+		  }
+		//change le contenu de l'élement avec l'id "nom" avec la chaine de caractéres en paramètre	  
+		  function setNom( nom ) {
+			var elementHtmlARemplir = window.document.getElementById("id_nom_a_remplacer");
+			elementHtmlARemplir.innerHTML = nom;
+		  }
+		
+
+</script>
+
+ 
+</head>
+<body
+<p>Fichier à modifier/compélter</p>
+<p>
+  <!--le bouton avec l'événement click 'attribut "onClick" capté. Cet événement appelle la fonction javascript setNom défini dans l'en-tête. -->
+  <input name="button" type="button" id="myButton1" onClick="setNom(document.getElementById('myText1').value);" value="1. Remplacer les noms" />
+  
+  <!--le champ de saisi avec l'identifiant "myText1" et la valeur par défaut "Toto" -->
+  <input name="text" type="text" id="myText1" value="Toto" />
+  <br />
+</p>
+<div>
+  <p>Les noms sont : <br/>
+      <span id="id_nom_a_remplacer" style="color: red; font-weight: bold;">LES NOMS (Cet &eacute;l&eacute;ment va &ecirc;tre remplac&eacute; par les noms) </span>.</p>
+</div>
+
+</body>
+</html>
