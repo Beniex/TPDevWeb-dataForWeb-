@@ -1,0 +1,809 @@
+
+<!-- saved from url=(0066)https://perso.liris.cnrs.fr/eegyedzs/Cours/MSIF/TP_XML_Javascript/ -->
+<html data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta name="Generator" content="Microsoft Word 15 (filtered)">
+    <title>Cours DW MSIF</title>
+    <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+h2
+	{mso-style-link:"Titre 2 Car";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"En-tête Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Pied de page Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Titre Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Titre Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Titre Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Titre Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:28.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+pre
+	{mso-style-link:"Préformaté HTML Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+span.Titre2Car
+	{mso-style-name:"Titre 2 Car";
+	mso-style-link:"Titre 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.PrformatHTMLCar
+	{mso-style-name:"Préformaté HTML Car";
+	mso-style-link:"Préformaté HTML";
+	font-family:"Courier New";}
+span.TitreCar
+	{mso-style-name:"Titre Car";
+	mso-style-link:Titre;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+span.En-tteCar
+	{mso-style-name:"En-tête Car";
+	mso-style-link:En-tête;
+	font-family:"Times New Roman",serif;}
+span.PieddepageCar
+	{mso-style-name:"Pied de page Car";
+	mso-style-link:"Pied de page";
+	font-family:"Times New Roman",serif;}
+span.instancename
+	{mso-style-name:instancename;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 49.55pt 70.85pt 42.55pt;}
+div.WordSection2
+	{page:WordSection2;}
+@page WordSection3
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection3
+	{page:WordSection3;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style> <style type="text/css">
+<!--
+#main {
+  position: relative;
+  z-index: 0;
+  width: 90%;
+  left: 5%;
+  top: 10px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+#body {
+  margin: 0em 0% 0em 1%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 90%;
+  line-height: normal;
+  font-size-adjust: none;
+  font-stretch: normal;
+}
+ 
+ #main p.xml {
+  border: 1px solid navy;
+  font-family: "Courier New",Courier,monospace;
+  background-color: #f0ffff;
+  color: black;
+  text-indent: 0em;
+}
+
+#main span.explication {
+  border: 1px solid navy;
+  background-color: #ccccff;
+  color: black;
+  }
+
+#main .instruction {
+	font-style: italic;
+	color: #006600;
+}
+
+-->
+  </style>
+    <link rel="stylesheet" href="./Cours DW MSIF_files/default.css">
+    <script src="./Cours DW MSIF_files/highlight.pack.js.download"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="./Cours DW MSIF_files/fichiers_ajax_partieJavascript.js.download"></script>
+  <meta id="dcngeagmmhegagicpcmpinaoklddcgon"></head>
+  <body vlink="#954F72" link="blue" lang="FR" data-new-gr-c-s-check-loaded="14.1222.0" data-gr-ext-installed="">
+    <div class="WordSection1">
+      <p class="MsoTitle"><span lang="EN-US">Données du Web : TP XPath, XSL </span></p>
+      <p class="MsoNormal"><span lang="EN-US">MSIF, février 2025</span></p>
+      <p class="MsoNormal"><span lang="EN-US"><br>
+        </span></p>
+      <p class="MsoNormal"><span lang="EN-US">Téléchargez l'archive contenant
+          les fichiers pour le TP <a href="https://perso.liris.cnrs.fr/eegyedzs/Cours/MSIF/TP_XML_Javascript/FichiersSourceTP1_DW.zip">ici</a>. <br>
+        </span></p>
+      <p class="MsoNormal"><span lang="EN-US">Décompressez-le et servez-vous
+          quand c'est demandé dans le sujet.<br>
+        </span></p>
+      <h2>Partie 1, XPath </h2>
+      <p>L’objectif de cet exercice est de vous familiariser avec XPath et XML</p>
+      <p><span style="font-size:11.0pt">Pour l’évaluation des expressions vous
+          pouvez utiliser le navigateur FireFox </span><span style="font-size:11.0pt"></span></p>
+      <p class="MsoNormal"><span style="font-size:11.0pt">Ouvrez le fichier </span><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;"> <a href="https://perso.liris.cnrs.fr/eegyedzs/Cours/MSIF/TP_XML_Javascript/Employees.xml">Employees.xml</a></span><span style="font-size:11.0pt"> présente dans l’archive du sujet avec
+          Firefox </span></p>
+    </div>
+    <div class="WordSection1"><span style="font-size:11.0pt"><br>
+      </span></div>
+    <div class="WordSection1"><span style="font-size:11.0pt"><br>
+      </span></div>
+    <div class="WordSection1"><span style="font-size:11.0pt">Pour évaluer des
+        expressions XPath, allez dans l'onglet développement : </span><span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">Bouton
+        droit/Inspecter ou F12.</span><span style="font-size:11.0pt"> Allez dans
+        l'onglet "Console" et utilisez <span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">$x("Votre
+          expressionXPath")</span>, par exemple : <span style="font-size:11.0pt;font-family:&quot;Courier New&quot;">$x("//Employee")</span>
+      </span><br>
+      <span style="font-size:11.0pt"></span>
+      <p class="MsoNormal"><br>
+        <span style="font-size:11.0pt"> </span></p>
+      <p class="MsoNormal"><span style="font-size:11.0pt">L'exercice s'applique
+          sur le fichier xml : </span><span style="font-size:11.0pt;
+font-family:&quot;Courier New&quot;">Employees.xml</span><span style="font-size:11.0pt">.
+          <br>
+          Il contient les données suivantes :</span></p>
+    </div>
+    <span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black"><br style="page-break-before:auto" clear="all">
+    </span>
+    <div class="WordSection2">
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;?<b>xml</b>
+          version=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">1.0</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US"> encoding=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#2A00FF" lang="EN-US">"UTF-8"</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">?&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Company&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"01"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> salary=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#2A00FF" lang="EN-US">"10000"</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Tim</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Browne</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">CEO</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">TBrowne@Infoteria.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">
+          &nbsp;&nbsp; </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">25</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"02"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">David</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Silverlight</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Chief XML Evangelist</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">HeadGeek@XMLPitstop.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Evangelist</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">30 </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"03"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> salary=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#2A00FF" lang="EN-US">"6000"</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Mike </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Damphouse</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Chief Marketing Officer </span><span style="font-size:9.0pt;font-family:
+&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">MDamphouse@Infoteria.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">31</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"04"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Todd</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Headrick</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Chief Technology Officer</span><span style="font-size:9.0pt;font-family:
+&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Theadrick@Infoteria.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">33</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"05"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> salary=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#2A00FF" lang="EN-US">"7000"</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Lilly</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Rose</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">President of Operations</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">LRose@xmlcom</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">President</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">35</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"06"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Timm</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Cok</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">CEO</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">tcok@apple.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">President</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">55</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"07"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">John</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Wayne</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Problem solver</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Cowboy@XML.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">40</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"08"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> salary=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#2A00FF" lang="EN-US">"20000"</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Joe</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Dalton</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Chief Evasion Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Chief@Dalton.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">President</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">31</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"09"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Averell</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Dalton</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Tall Evasion Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Averell@Dalton.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Officer</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">25</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Employee</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; id=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#2A00FF" lang="EN-US">"10"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;FirstName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Rantan</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/FirstName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;LastName&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Plan</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/LastName&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Position&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Watchdog</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Position&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Email&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">RPlan@waouf.com</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Email&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Category&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Guardian</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Category&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;Age&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">10</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055" lang="EN-US">&lt;/Age&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#7F0055">&lt;/Employee&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#7F0055">&lt;/Company&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#A65700">&nbsp;</span></p>
+    </div>
+    <span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:black"><br style="page-break-before:auto" clear="all">
+    </span>
+    <div class="WordSection3">
+      <p class="MsoNormal" style="background:white"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;;color:black">&nbsp;</span></p>
+      <p class="MsoNormal"><span style="color:black">Ecrivez les expressions
+          XPath qui retournent </span></p>
+      <ol start="1" type="1">
+        <li class="MsoNormal" style="color:black">les nœuds "<code>Employee</code>"
+          : la réponse est ici : //Employee <br>
+          <note>(faites attention XML et XPath sont sensibles à la casse des
+            charactères! je vous recommande de copier/coller les noms des
+            balises) </note></li>
+        <li class="MsoNormal" style="color:black">les nœuds "Employee" triés par
+          ordre alphabétique de leurs noms</li>
+        <li class="MsoNormal" style="color:black">les emails </li>
+        <li class="MsoNormal" style="color:black">les salaires</li>
+        <li class="MsoNormal" style="color:black">le nombre d'employés</li>
+        <li class="MsoNormal" style="color:black">le deuxième employé </li>
+        <li class="MsoNormal" style="color:black">les 3 premiers employés</li>
+        <li class="MsoNormal" style="color:black">l’âge de l’employé ayant
+          l’identifiant "06" </li>
+        <li class="MsoNormal" style="color:black">l’âge de l’employé "Wayne"</li>
+        <li class="MsoNormal" style="color:black">les noms des employées dont la
+          catégorie est "Officer" </li>
+        <li class="MsoNormal" style="color:black">les employés dont la longueur
+          du prénom est d’au moins 4 caractères </li>
+        <li class="MsoNormal" style="color:black">les employés dont le poste
+          (Position) contient "Chief"</li>
+        <li class="MsoNormal" style="color:black">les employés dont le nom est
+          le même que le domaine de leur email</li>
+        <li class="MsoNormal" style="color:black">le dernier nœud fils de
+          l'avant dernier nœud "Employee"</li>
+        <li class="MsoNormal" style="color:black">les employés plus jeunes que
+          30 ans</li>
+        <li class="MsoNormal" style="color:black">la somme des salaires</li>
+        <li class="MsoNormal" style="color:black">l’employé après John Wayne</li>
+        <li class="MsoNormal" style="color:black">la position de l’employé Wayne</li>
+      </ol>
+      <h2><span style="color:black">Partie 2, XSLT</span></h2>
+      <p>L'objectif de cet exercice est de créer des feuilles de styles XSL.
+        Pour commencer, vous pouvez utiliser le fichier :
+        cadre.xsl&nbsp;(présent dans l’archive du sujet) :</p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#004A43" lang="EN-US">&lt;?</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xml</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#004A43" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">version</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#7D0045" lang="EN-US">1.0</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#004A43" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">encoding</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#0000E6" lang="EN-US">utf-8</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#004A43" lang="EN-US">?&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xsl</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">stylesheet</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">version</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#008C00" lang="EN-US">1.0</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#666616" lang="EN-US">xmlns</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">xsl</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#666616" lang="EN-US">http</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">//</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5555DD" lang="EN-US">www.w3.org</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#40015A" lang="EN-US">/1999/XSL/Transform</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xsl</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">output</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">method</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#0000E6" lang="EN-US">html</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">/&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xsl</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">template</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#074726" lang="EN-US">match</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"<b>/</b>"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">html</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">head</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">title</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">XSLT Excercises</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:
+&quot;Courier New&quot;;color:#5F5035" lang="EN-US">title</span><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">head</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">body</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#274796" lang="EN-US">bgcolor</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#0000E6" lang="EN-US">beige</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">H1</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Company Information for Infoteria</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">H1</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">H2</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Employee Listing</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:
+&quot;Courier New&quot;;color:#5F5035" lang="EN-US">H2</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">table</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US"> </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#274796" lang="EN-US">border</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#808030" lang="EN-US">=</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#0000E6" lang="EN-US">1</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">"</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">tr</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Name</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Position</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">E-mail</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">th</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">tr</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">table</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">p</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">Total Employees:</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;
+color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:
+&quot;Courier New&quot;;color:#5F5035" lang="EN-US">p</span><span style="font-size:9.0pt;
+font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">body</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp;&nbsp;&nbsp;
+          </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#5F5035" lang="EN-US">html</span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:black" lang="EN-US">&nbsp; </span><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xsl</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">template</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white"><span style="font-size:
+9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&lt;/</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">xsl</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:purple" lang="EN-US">:</span><b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:maroon" lang="EN-US">stylesheet</span></b><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;;color:#A65700" lang="EN-US">&gt;</span></p>
+      <p class="MsoNormal" style="background:white">&nbsp;</p>
+      <p>Vous pouvez tester votre feuille de style avec EditX ou Firefox. </p>
+      <p>Pour cela:</p>
+      <ol>
+        <li>Ajoutez la ligne&nbsp;:<code> &lt;?xml-stylesheet type="text/xsl"
+            href="cadre.xsl"?&gt; </code>au fichier Employees.xml juste après
+          la première ligne. </li>
+        <li>Pour permettre à Firefox de chercher la feuille de style sur le
+          disque local, modifiez un paramètre du navigateur: allez sur la page :
+          <code>about:config</code> , cherchez l'option : <code>security.fileuri.strict_origin_policy</code>,
+          mettez sa valeur à faux. </li>
+        <li>Ouvrez simplement le fichier Employees.xml avec Firefox.</li>
+      </ol>
+      <p>Testez la systèmatiquement en ouvrant le fichier xml avec Firefox pour
+        voir le résultat! Si il ya erreur, EditX est plus locace sur sa raison
+        que Firefox ! </p>
+      <p class="MsoNormal" style="background:white">&nbsp;</p>
+      <p><span style="color:black" lang="EN-US">&nbsp;</span><span style="color:black">1.
+          Ecrivez une feuille de style en mode impératif qui produit le résultat
+          suivant : employés dans une table html, dans l'ordre de leur
+          apparition dans le fichier xml.</span></p>
+      <p><img id="Image 1" src="./Cours DW MSIF_files/image001.jpg" height="370" width="605" border="0"></p>
+      <p><span style="color:black">Voici une petite aide de syntaxe html pour
+          créer la table : </span></p>
+      <div align="center">
+        <table class="MsoNormalTable" cellspacing="3" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="padding:.75pt .75pt .75pt .75pt">
+                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;" lang="EN-US">&lt;table border="3" width="600"
+                    align="center"&gt;</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:.75pt .75pt .75pt .75pt">
+                <table class="MsoNormalTable" style="width:225.0pt;border:outset 2.25pt" width="0" cellspacing="3" cellpadding="0" border="1">
+                  <tbody>
+                    <tr>
+                      <td style="padding:.75pt .75pt .75pt .75pt">
+                        <table class="MsoNormalTable" style="width:225.0pt" width="0" cellspacing="3" cellpadding="0" border="0">
+                          <tbody>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;tr&gt;</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <div align="center">
+                                  <table class="MsoNormalTable" style="width:90.0%" width="90%" cellspacing="3" cellpadding="0" border="1">
+                                    <tbody>
+                                      <tr>
+                                        <td style="background:#FFFF99;padding:.75pt .75pt .75pt .75pt">
+                                          <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;td&gt;&lt;/td&gt;</span></p>
+                                        </td>
+                                        <td style="background:#FFFF99;padding:.75pt .75pt .75pt .75pt">
+                                          <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;td&gt;&lt;/td&gt;</span></p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;/tr&gt;</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;tr&gt;</span></p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <div align="center">
+                                  <table class="MsoNormalTable" style="width:90.0%" width="90%" cellspacing="3" cellpadding="0" border="1">
+                                    <tbody>
+                                      <tr>
+                                        <td style="background:#FFFF99;padding:.75pt .75pt .75pt .75pt">
+                                          <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;td&gt;&lt;/td&gt;</span></p>
+                                        </td>
+                                        <td style="background:#FFFF99;padding:.75pt .75pt .75pt .75pt">
+                                          <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;td&gt;&lt;/td&gt;</span></p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="background:#99FF66;padding:.75pt .75pt .75pt .75pt">
+                                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;/tr&gt;</span></p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:.75pt .75pt .75pt .75pt">
+                <p class="MsoNormal"><span style="font-family:&quot;Courier New&quot;">&lt;/table&gt;</span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><span style="color:black">&nbsp;2. Ecrivez une feuille de style qui
+          produit le même résultat en mode déclaratif (sans boucle for, avec
+          plusieurs règles)</span></p>
+      <p><span style="color:black">3. Créez une seconde feuille de style qui
+          trie les employés selon leur nom. </span></p>
+      <p><span style="color:black">4. Créez une feuille de style qui affiche
+          uniquement les employés qui ont moins que 33 ans.</span></p>
+      <p><span style="color:black">5. Créez une feuille de style qui regroupe
+          les employés d'une même entreprise (selon le domaine de leur adresse
+          email).</span></p>
+      <p><img id="Image 2" src="./Cours DW MSIF_files/image002.jpg" height="390" width="605" border="0"></p>
+      <p><span style="color:black">6. Créez une feuille de style qui affiche une
+          ligne sur 2 avec un fond blanc au lieu de beige. </span></p>
+      <p style="margin-bottom:12.0pt"><img id="Image 4" src="./Cours DW MSIF_files/image003.jpg" height="368" width="604" border="0"></p>
+      <h2>&nbsp;</h2>
+      <span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><br style="page-break-before:always" clear="all">
+      </span>
+      <p class="MsoNormal"><span style="font-size:18.0pt">&nbsp;</span></p>
+      <h2>Partie 3 Ajax</h2>
+      <p class="instruction">Utilisez les outils de développement de Firefox
+        (bouton F12 sous Windows/Linux ) pour inspecter les éléments, consultez
+        les messages d'erreur dans l'onglet : Console, exécutez pas à pas le
+        javascript dans l'onglet Débogueur. Regardez le<a href="https://developer.mozilla.org/fr/docs/Outils/D%C3%A9bogueur" target="_blank"> tutoriel officiel Mozilla </a>pour vous familiariser
+        avec ce processus. </p>
+      <p class="instruction">Utilisez un éditeur de texte, par exemple
+        Notepad++, Eclipse ou Brackets.io (portable si nécessaire) pour modifier
+        le code source des pages. </p>
+      <p class="instruction"><strong>Vous trouverez des informations
+          complémentaires sur le site de w3schools.com sur les méthodes <a href="http://www.w3schools.com/dom/dom_node.asp" onclick="window.open(this.href); return false;">DOM en général</a>
+          et sur les méthodes <a href="http://www.w3schools.com/jsref/dom_obj_document.asp" onclick="window.open(this.href); return false;">DOM spécifique html</a></strong></p>
+      <p>Dans le répertoire <code>ajax</code> du sujet, vous trouvez 3 fichiers
+        html (PartieAjaxDOM_01.html, PartieAjaxDOM_02.html,
+        PartieAjaxDOM_03.html). </p>
+      <ol>
+        <li>Ouvrez le fichier <code>PartieAjaxDOM_01.html </code>avec Firefox
+          et avec votre éditeur de code. Cette page contient un bouton qui
+          remplace un texte sur la page par le contenu d’un champ de saisi.
+          Regardez le code source dans votre éditeur, lisez les commentaires et
+          exécuter pas à pas le javascript dans Firefox. Quel est l’identifiant
+          (valeur de l’attribut <code>id</code>) de l’élément qui est remplacé
+          par le contenu du champ de saisi dans cet exemple&nbsp;? </li>
+        <li>Ajouter un second champ de saisi dans la page à côté du premier avec
+          l’identifiant «&nbsp;<code>myText2</code>&nbsp;». Au clic sur le
+          bouton afficher les contenus concaténés des deux boutons.
+          <ul>
+            <li>Ajouter un second paramètre à la fonction <code>setNom</code>
+              avec le contenu du champ <code>myText2</code> </li>
+            <li>Chercher sur internet comment on concatène 2 chaines de
+              caractères en javascript et afficher les 2 chaines de caractères
+              sur la page (Si l’affichage ne se déroule pas comme prévu, allez
+              dans l’onglet «&nbsp;<em>Console</em>&nbsp;» de la section de
+              développement (F12) de Firefox et vérifiez qu’il n’y ait pas un
+              message d’erreur, exécutez pas à pas éventuellement et vérifiez
+              les valeurs de vos variables)</li>
+          </ul>
+        </li>
+        <li>Ouvrez le fichier <code>PartieAjaxDOM_02.html </code>avec Firefox
+          et avec votre éditeur de code.&nbsp; Cette page ajoute un second
+          bouton qui lit le fichier <code>Employee.xml,</code> extrait les noms
+          des employés et les affiche sur la page. Regardez le code source dans
+          votre éditeur, lisez les commentaires et exécuter pas à pas le
+          javascript dans Firefox. Quel est le nom de la variable dans laquelle
+          on concatène les noms des employés&nbsp;?</li>
+        <li>Modifiez la fonction appelée au second bouton pour qu’elle affiche
+          les prénoms et les noms de chaque employé. </li>
+        <li>Affichez les employés dans une liste numérotée (balise <code>&lt;ol&gt;</code>
+          et éléments <code>&lt;li&gt;</code>)</li>
+        <li>Ouvrez le fichier <code>PartieAjaxDOM_03.html </code>avec Firefox
+          et avec votre éditeur de code. Cette page charge un fichier XML et une
+          feuille de style, transforme le fichier XML avec la feuille de style
+          et affiche une partie du résultat sur la page html. Ouvrez les
+          fichiers <code>ajax.bib.xml </code>et <code>ajax.bib.xsl </code>avec
+          EditX, puis le fichier <code>ajax.bib.xml </code>avec Firefox.
+          Examiner la page généré (bouton droit, puis Examine élément).</li>
+        <li>Créez ensuite un Bouton 4 dans le fichier <code>PartieAjaxDOM_03.html</code>
+          qui charge Employees.xml, le fichier xsl que vous avez créé pour la
+          partie 2.2 (XSL), et qui affiche le résultat de la transformation du
+          document XML par la feuille de style (le tableau des employés) en bas
+          de la page html.</li>
+      </ol>
+      <p class="MsoNormal">&nbsp;</p>
+      <p class="MsoNormal">&nbsp;</p>
+    </div>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
